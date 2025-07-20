@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Oxanium:wght@200..800&family=Quicksand&display=swap');
+
+:root {
+    --primary-color: #121212;
+    --hover-color: #383838;
+    --text-color: #00F539;
+    --accent-color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text-color)
+}
+
+html {
+    font-family: "Libre Franklin", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    background: var(--primary-color)
+}
+
+main {
+    padding: min(5em, 7%);
+}
+
+main p {
+    margin-top: .35em;
+}
+
+
+
+.skip-link {
+    opacity: 0;
+    /*Hide the link*/
+    pointer-events: none;
+    /*disable interaction*/
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    background-color: var(--text-color);
+    color: var(--primary-color);
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: opacity 0.3s ease;
+}
+
+.skip-link:focus {
+    opacity: 1;
+    /*Make link visible*/
+    pointer-events: auto;
+    /*enable interaction*/
+    outline: 3px solid white;
+}
+
+nav {
+    background-color: var(--primary-color);
+    border-bottom: 1px solid var(--hover-color);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    display: flex;
+}
+
+nav .home-li {
+    margin-right: auto;
+}
+
+nav a {
+    display: flex;
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 1em 2em;
+    transition: background-color 150ms ease;
+}
+
+nav a:hover {
+    background-color: var(--hover-color);
+}
+
+nav a.active-link {
+    border-bottom: 2px solid var(--text-color)
+}
+
+nav :any-link.accent-link {
+    background-color: var(--text-color);
+    color: var(--primary-color)
+}
+
+nav a.accent-link:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+#open-sidebar-button {
+    display: none;
+    background: none;
+    border: none;
+    padding: 1em;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+#close-sidebar-button {
+    display: none;
+    background: none;
+    border: none;
+    padding: 1em;
+    cursor: pointer;
+}
+
+#overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    inset: 0;
+    z-index: 9;
+    display: none;
+}
+
+#name {
+    text-align: center;
+    text-shadow: 1px 1px px #8b8b8b;
+    font-style: italic;
+    font-size: 3rem;
+}
+
+
+#profilePic {
+    border-radius: 10%;
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0px 0px 5px #00F539);
+}
+
+#tagline {
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.hero {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2em;
+}
+
+.about {
+    padding: 2em;
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 2;
+    max-width: 1000px;
+}
+
+.hero p {
+    color: white;
+}
+
+#drive,
+#personal {
+    padding-top: 1em;
+}
+
+#tagline p {
+    color: white;
+}
+
+#expTech {
+    text-align: center;
+    padding-bottom: 2em;
+}
+
+.lang-tool {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.svgGrid {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-gap: 100px;
+}
+
+.expHero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.experience {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.experience li {
+    color: white;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+#contactHeading {
+    font-size: 3em;
+    text-align: center;
+}
+
+#contactP p {
+    color: white;
+    text-align: center;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1em;
+}
+
+
+
+#nameInput,
+#emailInput,
+#subject {
+    height: 50px;
+    width: 500px;
+}
+
+#messageInput {
+    height: 300px;
+    width: 500px;
+}
+
+input,
+textarea {
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 16px;
+    padding-left: 10px;
+    border-radius: 10px;
+    color: var(--primary-color);
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#submit {
+    font-family: "Libre Franklin", sans-serif;
+    border-radius: 10px;
+    height: 50px;
+    width: 150px;
+    background: var(--text-color);
+    color: var(--primary-color);
+    font-size: 20px;
+    border: 2px solid;
+}
+
+#submit:hover {
+    background-color: #8cfb84;
+    transition: background-color 400ms ease-in-out;
+}
+
+
+@media screen and (max-width: 700px) {
+
+    #open-sidebar-button,
+    #close-sidebar-button {
+        display: block;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: min(15em, 100%);
+        z-index: 10;
+        border-left: 1px solid var(--hover-color);
+        transition: right 300ms ease-out;
+    }
+
+    nav.show {
+        right: 0;
+    }
+
+    nav ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 100%;
+        padding-left: 2.5em;
+    }
+
+    nav a.active-link {
+        border-bottom: none;
+    }
+
+    nav home-li {
+        margin-right: unset;
+    }
+
+    nav.show~#overlay {
+        display: block;
+    }
+
+    .hero {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .about {
+        width: 100%;
+        padding: none;
+    }
+
+    .expHero {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .experience {
+        width: 100%;
+        padding: none;
+    }
+
+    .svgGrid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #nameInput,
+    #emailInput {
+        max-width: 300px;
+    }
+
+    #messageInput {
+        max-width: 300px;
+    }
+
+}
