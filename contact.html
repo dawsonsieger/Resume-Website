@@ -50,7 +50,7 @@
 
         <form action="https://formsubmit.co/5a1d8f0f0bcd4a4310b5d027a2206475" method="POST">
             <!-- Honeypot -->
-            <input type="text" name="_honey" style="display:none;">
+            <input type="text" name="_honey" style="display:none;" aria-hidden="true">
             <!-- Disable Captcha -->
             <input type="hidden" name="_captcha" value="false">
 
@@ -60,7 +60,8 @@
                 <input type="text" name="Name" placeholder="Full Name" id="nameInput" autocomplete="off" required>
                 <label class="form-label" for="emailInput">&#128231; Please provide your email:</label>
                 <input type="email" name="Email" placeholder="Email" id="emailInput" autocomplete="off" required>
-                <label class="form-label" for="messageInput">&#128172; Your custom message goes here (bonus points if you include
+                <label class="form-label" for="messageInput">&#128172; Your custom message goes here (bonus points if
+                    you include
                     a pun):</label>
                 <textarea name="Message" placeholder="Message" id="messageInput" autocomplete="off" required></textarea>
                 <button type="submit" id="submit">Send</button>
