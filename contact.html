@@ -56,13 +56,14 @@
 
             <input type="hidden" name="_next" value="https://dawsonsieger.github.io/Resume-Website/success.html">
             <div class="contact">
-                <input type="text" name="Name" placeholder="Full Name" id="nameInput" autocomplete="off" label="name"
-                    required>
-                <input type="email" name="Email" placeholder="Email" id="emailInput" autocomplete="off" label="email"
-                    required>
-                <textarea name="Message" placeholder="Message" id="messageInput" autocomplete="off" label="message"
-                    required></textarea>
-                <button type="submit" id="submit" label="submitButton">Send</button>
+                <label class="form-label" for="nameInput">&#128513; Your full name:</label>
+                <input type="text" name="Name" placeholder="Full Name" id="nameInput" autocomplete="off" required>
+                <label class="form-label" for="emailInput">&#128231; Please provide your email:</label>
+                <input type="email" name="Email" placeholder="Email" id="emailInput" autocomplete="off" required>
+                <label class="form-label" for="messageInput">&#128172; Your custom message goes here (bonus points if you include
+                    a pun):</label>
+                <textarea name="Message" placeholder="Message" id="messageInput" autocomplete="off" required></textarea>
+                <button type="submit" id="submit">Send</button>
             </div>
         </form>
     </main>
