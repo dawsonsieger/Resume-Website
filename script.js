@@ -27,6 +27,7 @@ function closeSidebar() {
     navbar.classList.remove('show')
     openButton.setAttribute('aria-expanded', 'false')
     navbar.setAttribute('inert', '')
+    openButton.focus();
 }
 
 const navLinks = document.querySelectorAll('nav a')
