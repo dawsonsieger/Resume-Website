@@ -32,7 +32,11 @@ main p {
     margin-top: .35em;
 }
 
-
+.title {
+    text-align: center;
+    font-style: italic;
+    font-size: 3rem;
+}
 
 .skip-link {
     opacity: 0;
@@ -130,14 +134,6 @@ nav a.accent-link:hover {
     display: none;
 }
 
-#name {
-    text-align: center;
-    text-shadow: 1px 1px px #8b8b8b;
-    font-style: italic;
-    font-size: 3rem;
-}
-
-
 #profilePic {
     border-radius: 10%;
     max-width: 100%;
@@ -188,6 +184,11 @@ nav a.accent-link:hover {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    padding-right: 50px;
+}
+
+.lang-tool h2 {
+    padding-bottom: 30px;
 }
 
 .svgGrid {
@@ -196,10 +197,17 @@ nav a.accent-link:hover {
     grid-gap: 100px;
 }
 
+.tool p {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
 .expHero {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    padding-top: 50px;
 }
 
 .experience {
@@ -210,8 +218,17 @@ nav a.accent-link:hover {
 
 .experience li {
     color: white;
-    text-align: left;
     font-size: 1.2rem;
+}
+
+.experience h2,
+h3 {
+    font-style: italic;
+}
+
+.conference,
+.oneSupp {
+    padding-top: 20px;
 }
 
 #contactHeading {
@@ -233,10 +250,8 @@ nav a.accent-link:hover {
 }
 
 
-
 #nameInput,
-#emailInput,
-#subject {
+#emailInput {
     height: 50px;
     width: 500px;
 }
@@ -266,11 +281,12 @@ textarea::placeholder {
     font-family: "Libre Franklin", sans-serif;
     border-radius: 10px;
     height: 50px;
-    width: 150px;
+    width: 500px;
     background: var(--text-color);
     color: var(--primary-color);
     font-size: 20px;
     border: 2px solid;
+
 }
 
 #submit:hover {
@@ -344,15 +360,14 @@ textarea::placeholder {
         flex-wrap: wrap;
     }
 
-    .experience {
-        width: 100%;
-        padding: none;
-    }
-
     .svgGrid {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+    }
+
+    .experience {
+        padding-top: 30px;
     }
 
     #nameInput,
