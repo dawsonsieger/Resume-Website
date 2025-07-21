@@ -20,7 +20,7 @@
 <ul>
   <li>Manual testing with JAWS, NVDA, VoiceOver, and TalkBack</li> 
   <li>Keyboard and screen magnifier usability tested</li>
-  <li>kUses ARIA landmarks where appropriate</li>
+  <li>Uses ARIA landmarks where appropriate</li>
   <li>Clear visual hierarchy and focus indicators</li>
 </ul>
 
